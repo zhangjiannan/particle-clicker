@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>particle-clicker :: test </title>
+    <style>
+      body {
+        font: 300 12pt/1.125 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+      }
+
+      #Detector {
+        float: left;
+        cursor: pointer;
+        width: 200px;
+        height: 200px;
+      }
+
+      body > div {
+        margin: 20px;
+        padding: 4px;
+        border: 1px solid #ccc;
+        float: left;
+      }
+
+      body > div > h1 {
+        margin: 0 0 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="assets/detector.png" id="Detector">
+
+    <div id="Lab"></div>
+    <div id="Discoveries"></div>
+    <div id="HR"></div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
