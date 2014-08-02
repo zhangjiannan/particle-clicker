@@ -22,11 +22,14 @@
     money: 0,
     researchHistogram: new Histogram('#ResearchHist'),
     getGrant: function () {
-      this.money += this.reputation * 5;  // TODO: adjust factor
+      var addition = this.reputation * 5  // TODO: adjust factor
+      this.money += addition;
+      achievements.count.money += addition;
     },
     acquire: function (amount) {
       this.data += amount;
       this.researchHistogram.add_events(amount);
+      achievements.count.data += amount;
     },
     research: function (cost, reputation) {
       if (this.data >= cost) {
@@ -47,12 +50,15 @@
       this.money += cost;
     }
   };
+ 
+  achievements.setList(loadJsonFile('json/achievements.json'));
 
   /* Construct research object from json file.
    * Additional attribute level keeps track of the current upgrade status.
    * Also add functionality to research each item.
    */
   var research = loadJsonFile('json/research.json');
+  achievements.addResearch(research);
   research.map(function (item) {  // define additional stuff on the objects
     item.level = 0;
     item.is_visible = function () {
@@ -65,11 +71,13 @@
       if (lab.research(this.cost, this.reputation)) {
         this.level++;
         this.cost = Math.round(this.cost * this.cost_increase);
+        achievements.research[this.name]++;
       }
     };
   });
 
   var workers = loadJsonFile('json/workers.json');
+  achievements.addWorkers(workers);
   workers.map(function (worker) {
     worker.hired = 0;
     worker.is_visible = function () {
@@ -82,6 +90,7 @@
       if (lab.buy(this.cost)) {
         this.hired++;
         this.cost = Math.round(this.cost * this.cost_increase);
+        achievements.update('workers', this.name, 1);
       }
     };
   });
@@ -148,6 +157,7 @@
     this.click = function () {
       lab.acquire(lab.detector.rate);
       detector.addEvent();
+      achievements.count.clicks += 1;
     };
   });
 
@@ -173,6 +183,10 @@
 
   app.controller('UpgradesController', function () {
     this.upgrades = upgrades;
+  });
+
+  app.controller('AchievementsController', function () {
+    this.achievements = achievements.list;
   });
 })();
 
