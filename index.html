@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="particleClicker">
+  <head>
+    <title>Particle Clicker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!--<nav class="navbar navbar-default navbar-fixed-top" ng-controller="LabController as lc">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <span class="navbar-brand" contenteditable="true" strip-br="true" ng-model="lc.lab.name">{{ lc.lab.name }}</span>
+        </div>
+        <p class="navbar-text">Data: <strong>{{ lc.lab.data | number:0 }}</strong></p>
+        <p class="navbar-text">Reputation: <strong>{{ lc.lab.reputation | number:0 }}</strong></p>
+        <p class="navbar-text">Money: <strong>{{ lc.lab.money | currency }}</strong></p>
+        <p class="navbar-text navbar-right"><a href="https://github.com/ibab/particle-clicker/"><img src="assets/github.png" alt="GitHub" width="16"></a></p> 
+      </div>
+    </nav>-->
+
+    <div class="container-fluid">
+      <div class="col-xs-3 scrollable" id="Research" ng-controller="ResearchController as rc">
+        <h1>Research</h1>
+        <hr>
+        <ul class="media-list">
+          <li class="media" ng-repeat="r in rc.research" ng-show="r.is_visible()">
+              <img class="pull-left" class="media-object" src="{{ r.image }}" alt="">
+            <div class="media-body">
+              <h4 class="media-heading">{{ r.name }} <span ng-show="r.level > 0" class="badge">Level {{ r.level }}</span></h4>
+              <p ng-show="r.level > 0">{{ r.description }} Researching it will give you {{ r.reputation }} reputation.</p>
+              <button class="btn" ng-disabled="!r.is_available()" ng-click="r.research()">Research <small>({{ r.cost }} data)</small></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-xs-5 scrollable">
+        <h1 contenteditable ng-controller="LabController as lc">{{ lc.lab.name }}</h1>
+        <hr>
+        <div id="detector" ng-controller="DetectorController as dc">
+          <canvas id="detector-core" width="400" height="400">
+            Your detector. Click on it to generate events.
+          </canvas>
+          <canvas ng-click="dc.click()" id="detector-events" width="400" height="400">
+            Your detector. Click on it to generate events.
+          </canvas>
+        </div>
+        <div class="row lead bg-warning" ng-controller="LabController as lc">
+          <p class="col-xs-4 text-center"><strong>Data</strong><br>{{ lc.lab.data | number:0 }}</p>
+          <p class="col-xs-4 text-center"><strong>Reputation</strong><br>{{ lc.lab.reputation | number:0 }}</p>
+          <p class="col-xs-4 text-center"><strong>Money</strong><br> {{ lc.lab.money | currency }}</p>
+        </div>
+        <div id="ResearchHist"></div>
+      </div>
+
+      <div class="col-xs-2 scrollable" id="HR" ng-controller="HRController as hrc">
+        <h1>HR Dept</h1>
+        <hr>
+        <ul class="media-list">
+          <li class="media" ng-repeat="w in hrc.workers" ng-show="w.is_visible()">
+            <img style="display: none" class="pull-left" class="media-object" src="{{ w.image }}" alt="">
+            <div class="media-body">
+              <h4 class="media-heading">{{ w.name }} <span ng-show="w.hired > 0" class="badge">{{ w.hired }}</span></h4>
+              <p ng-show="w.hired > 0">{{ w.description }} They produce {{ w.rate }} data per second.</p>
+              <button class="btn" ng-disabled="!w.is_available()" ng-click="w.hire()">Hire <small>({{ w.cost | currency }})</small></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-xs-2 scrollable" id="Upgrades" ng-controller="UpgradesController as uc">
+        <h1>Upgrades</h1>
+        <hr>
+        <a href="#"
+           class="thumbnail"
+           ng-repeat="u in uc.upgrades"
+           ng-show="u.is_visible()"
+           ng-disabled="!u.is_available()"
+           ng-click="u.buy()"
+           data-toggle="tooltip"
+           data-placement="bottom"
+           title="{{ u.name }}: {{ u.description }} ">
+           <img src="{{ u.image }}" alt="{{ u.name }}"> <small>{{ u.cost | currency }}</small>
+        </a>
+      </div>
+    </div>
+
+    <div id="InfoBox">
+      Particle Clicker <a href="https://github.com/ibab/particle-clicker/"><img src="assets/github.png" alt="GitHub"></a>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/event.js"></script>
+    <script src="js/detector.js"></script>
+    <script src="js/histogram.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/ui.js"></script>
+  </body>
+</html>

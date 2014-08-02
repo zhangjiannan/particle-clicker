@@ -1,0 +1,42 @@
+[
+  {
+    "name": "W-Boson",
+    "description": "The W-Boson is the carrier boson of the weak force.",
+    "reputation": 1,
+    "cost": 10,
+    "cost_increase": 1.2,
+    "image": "assets/W.png"
+  },
+  {
+    "name": "Z-Boson",
+    "description": "The Z-Boson.",
+    "reputation": 5,
+    "cost": 50,
+    "cost_increase": 1.2,
+    "image": "assets/Z.png"
+  },
+  {
+    "name": "top-Quark",
+    "description": "The top-Quark.",
+    "reputation": 100,
+    "cost": 1000,
+    "cost_increase": 1.2,
+    "image": "assets/t.png"
+  },
+  {
+    "name": "Higgs-Boson",
+    "description": "The Higgs-Boson...",
+    "reputation": 1000,
+    "cost": 10000,
+    "cost_increase": 1.2,
+    "image": "assets/H.png"
+  },
+  {
+    "name": "MSSM",
+    "description": "You somehow managed to find proof for the Minimal Supersymmetric Standard Model. Wow!",
+    "reputation": 100000,
+    "cost": 1000000,
+    "cost_increase": 2,
+    "image": "assets/chitilde.png"
+  }
+]
