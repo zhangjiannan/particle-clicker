@@ -1,0 +1,44 @@
+[
+  {
+    "name": "博士",
+    "description": "廉价有热情的劳动力, 他们能帮你做好多事.",
+    "cost": 100,
+    "cost_increase": 1.4,
+    "rate": 1
+  },
+  {
+    "name": "博士后",
+    "description": "这些很聪明的人只为你工作！",
+    "cost": 2000,
+    "cost_increase": 1.4,
+    "rate": 5
+  },
+  {
+    "name": "研究Fellow",
+    "description": "你付很高的工资给他们. 他们蛮拼的.",
+    "cost": 50000,
+    "cost_increase": 1.5,
+    "rate": 50
+  },
+  {
+    "name": "教授",
+    "description": "他们会一并把自己的团队带来，能做很多事的！",
+    "cost": 1000000,
+    "cost_increase": 1.6,
+    "rate": 100
+  },
+  {
+    "name": "诺贝尔奖得主",
+    "description": "的诺贝尔奖还是有原因的... 为什么不多给他们点工资?",
+    "cost": 50000000,
+    "cost_increase": 2,
+    "rate": 500
+  },
+  {
+    "name": "暑期学生",
+    "description": "他们有最棒的想法，做事效率最高.",
+    "cost": 99999999,
+    "cost_increase": 3,
+    "rate": 1000
+  }
+]
