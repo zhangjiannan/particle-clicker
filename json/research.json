@@ -1,7 +1,7 @@
 [
   {
     "name": "CP violation",
-    "description": "CP symmetry is broken!",
+    "description": "发现CP对称性破缺！",
     "reputation": 1,
     "cost": 10,
     "cost_increase": 1.4,
@@ -10,7 +10,7 @@
   },
   {
     "name": "J/ψ",
-    "description": "The J/ψ meson consists of a c and an anti-c quark.",
+    "description": " J/ψ是个介子（meson）它是由一个charm 夸克和一个反charm夸克组成的（介子的定义就是由夸克和反夸克组成的束缚态）。",
     "reputation": 5,
     "cost": 100,
     "cost_increase": 1.45,

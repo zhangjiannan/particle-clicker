@@ -1,34 +1,34 @@
 [
   {
-    "description": "${name} discovery!",
+    "description": "发现 ${name}!",
     "icon": "glyphicon-cog",
     "type": "research",
     "target": "research",
     "threshold": 1
   },
   {
-    "description": "${name} research level 5!",
+    "description": "${name} 研究5级!",
     "icon": "glyphicon-cog",
     "type": "research",
     "target": "research",
     "threshold": 5
   },
   {
-    "description": "${name} research level 25!",
+    "description": "${name} 研究25级!",
     "icon": "glyphicon-cog",
     "type": "research",
     "target": "research",
     "threshold": 25
   },
   {
-    "description": "${name} research level 50!",
+    "description": "${name} 研究50级!",
     "icon": "glyphicon-cog",
     "type": "research",
     "target": "research",
     "threshold": 50
   },
   {
-    "description": "${name} research level 100!",
+    "description": "${name} 研究100级!",
     "icon": "glyphicon-cog",
     "type": "research",
     "target": "research",
@@ -37,35 +37,35 @@
 
 
   {
-    "description": "The first ${name} hired!",
+    "description": "雇用了第一个 ${name}!",
     "icon": "glyphicon-user",
     "type": "workers",
     "target": "workers",
     "threshold": 1
   },
   {
-    "description": "5 ${name} working for you!",
+    "description": "5个 ${name} 为你工作!",
     "icon": "glyphicon-user",
     "type": "workers",
     "target": "workers",
     "threshold": 5
   },
   {
-    "description": "25 ${name} working for you!",
+    "description": "25个 ${name} 为你工作!",
     "icon": "glyphicon-user",
     "type": "workers",
     "target": "workers",
     "threshold": 25
   },
   {
-    "description": "50 ${name} working for you!",
+    "description": "50个 ${name} 为你工作!",
     "icon": "glyphicon-user",
     "type": "workers",
     "target": "workers",
     "threshold": 50
   },
   {
-    "description": "100 ${name} working for you!",
+    "description": "100个 ${name} 为你工作!",
     "icon": "glyphicon-user",
     "type": "workers",
     "target": "workers",
@@ -74,42 +74,42 @@
 
 
   {
-    "description": "Your first click!",
+    "description": "你点了一下（你的第一次粒子碰撞）!",
     "icon": "glyphicon-hand-up",
     "type": "count",
     "target": "clicks",
     "threshold": 1
   },
   {
-    "description": "100 clicks!",
+    "description": "点了100下（你的第100次粒子碰撞）!",
     "icon": "glyphicon-hand-up",
     "type": "count",
     "target": "clicks",
     "threshold": 100
   },
   {
-    "description": "1000 clicks!",
+    "description": "点了1000下（你的第1000次粒子碰撞）!",
     "icon": "glyphicon-hand-up",
     "type": "count",
     "target": "clicks",
     "threshold": 1000
   },
   {
-    "description": "10.0k clicks!",
+    "description": "点了10000下（你的第10000次粒子碰撞）!",
     "icon": "glyphicon-hand-up",
     "type": "count",
     "target": "clicks",
     "threshold": 10000
   },
   {
-    "description": "100.0k clicks!",
+    "description": "点了100000下!（你的第100000次粒子碰撞）",
     "icon": "glyphicon-hand-up",
     "type": "count",
     "target": "clicks",
     "threshold": 100000
   },
   {
-    "description": "1.0M clicks!",
+    "description": "100万次点击（100万次粒子碰撞）!",
     "icon": "glyphicon-hand-up",
     "type": "count",
     "target": "clicks",
@@ -117,35 +117,35 @@
   },
 
   {
-    "description": "100 data collected!",
+    "description": "收集了100单位数据!",
     "icon": "glyphicon-hdd",
     "type": "count",
     "target": "data",
     "threshold": 100
   },
   {
-    "description": "10.0k data collected!",
+    "description": "收集了10000单位数据!",
     "icon": "glyphicon-hdd",
     "type": "count",
     "target": "data",
     "threshold": 10000
   },
   {
-    "description": "1.0M data collected!",
+    "description": "收集了100万单位数据!",
     "icon": "glyphicon-hdd",
     "type": "count",
     "target": "data",
     "threshold": 1000000
   },
   {
-    "description": "100.0M data collected!",
+    "description": "收集了1亿单位数据!",
     "icon": "glyphicon-hdd",
     "type": "count",
     "target": "data",
     "threshold": 100000000
   },
   {
-    "description": "10.0B data collected!",
+    "description": "收集了100亿单位数据!",
     "icon": "glyphicon-hdd",
     "type": "count",
     "target": "data",
