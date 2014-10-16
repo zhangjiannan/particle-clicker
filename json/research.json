@@ -1,6 +1,6 @@
 [
   {
-    "name": "CP violation",
+    "name": "CP 对称性破缺",
     "description": "发现CP对称性破缺！",
     "reputation": 1,
     "cost": 10,
@@ -9,7 +9,7 @@
     "info": "html/CPV.html"
   },
   {
-    "name": "J/ψ",
+    "name": "J/ψ 理论",
     "description": " J/ψ是个介子（meson）它是由一个charm 夸克和一个反charm夸克组成的（介子的定义就是由夸克和反夸克组成的束缚态）。",
     "reputation": 5,
     "cost": 100,

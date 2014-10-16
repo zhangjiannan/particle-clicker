@@ -9,7 +9,7 @@ var GameObjects = (function() {
    */
   var labPrototype = {
     version: '0.2',
-    name: "A catchy name for your lab",
+    name: "给你的实验室起一个很酷的名字！",
     detector: {
       rate: 1
     },
